@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-webpack-spritesmith",     "homepage": "https://github.com/npmtest/node-npmtest-webpack-spritesmith",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-webpack-spritesmith.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [webpack-spritesmith (v0.3.3)](https://github.com/mixtur/webpack-spritesmith#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-webpack-spritesmith.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-webpack-spritesmith) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-webpack-spritesmith.svg)](https://travis-ci.org/npmtest/node-npmtest-webpack-spritesmith)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-webpack-spritesmith",
+    "keywords": [
+        "coverage",
+        "test",
+        "webpack-spritesmith"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_webpack_spritesmith.js",
+    "name": "npmtest-webpack-spritesmith",
+    "nameAlias": "npmtest_webpack_spritesmith",
+    "nameOriginal": "npmtest-webpack-spritesmith",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-webpack-spritesmith.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
